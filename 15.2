@@ -1,0 +1,13 @@
+def is_palindrom(kalimat):
+    # Membersihkan spasi dan mengubah ke huruf kecil agar akurat
+    kalimat = kalimat.replace(" ", "").lower()
+    
+    # Base Case
+    if len(kalimat) <= 1:
+        return True
+    if kalimat[0] != kalimat[-1]:
+        return False
+    # Recursive Case
+    return is_palindrom(kalimat[1:-1])
+
+print(is_palindrom("Kasur ini rusak"))  # Output: True
