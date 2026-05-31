@@ -1,0 +1,10 @@
+def jumlah_ganjil(n):
+    # Base Case
+    if n <= 0:
+        return 0
+    if n % 2 == 0:
+        return jumlah_ganjil(n - 1)  # Jika genap, mundur ke ganjil terdekat
+    # Recursive Case
+    return n + jumlah_ganjil(n - 2)
+
+print(jumlah_ganjil(7))  # 1 + 3 + 5 + 7 = 16
